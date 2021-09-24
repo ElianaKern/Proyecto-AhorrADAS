@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AhorrADAS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/0ca0e55b9a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--BARRA DE NAVEGACIÓN-->
+    <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <h1 class="navbar-brand title is-2 has-text-white">
+                <a class="navbar-item">
+                    <i class="fas fa-wallet mr-2" aria-hidden="true"></i>
+                    AhorrADAs</a>
+            </h1>
+        </div>
+        <!--BURGER-->
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <!--LINKS DE NAVEGACIÓN-->
+        <div class="navbar-end">
+            <a class="navbar-item has-text-white"><i class="fas fa-chart-line mr-2"></i>Balance</a>
+            <a class="navbar-item has-text-white"><i class="fas fa-tag mr-2" aria-hidden="true"></i>Categorias</a>
+            <a class="navbar-item has-text-white"><i class="fas fa-chart-pie mr-2" aria-hidden="true"></i>Reportes</a>
+        </div>
+    </nav>
+
+    <!--SECCION PRINCIPAL CON TARJETAS-->
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <!--SECTOR IZQUIERDA-->
+                <div class="column is-offset-1 is-3">
+                    <!--TARJETA BALANCE-->
+                    <article class="box">
+                        <h3 class="title">Balance</h3>
+                        <div class="columns">
+                            <div class="column is-5">
+                                <p class="notification">Ganancias</p>
+                                <p class="notification">Gastos</p>
+                                <p class="notification">Total</p>
+                            </div>
+
+                            <div class="column is-7">
+                                <p class="notification has-text-right">4000</p>
+                                <p class="notification has-text-right">4000</p>
+                                <p class="notification has-text-right">4000</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!--TARJETA FILTROS-->
+                    <article class="box">
+                        <div class="columns">
+                            <h3 class="title column is-6">Filtros</h3>
+                            <button class="button is-ghost column is-6">Ocultar filtros</button>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Tipo</label>
+                            <div class="control">
+                                <div class="select is-fullwidth is-normal">
+                                    <select>
+                                        <option value="todos">Todos</option>
+                                        <option value="gastos">Gastos</option>
+                                        <option value="ganancia">Ganancia</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Categorias</label>
+                            <div class="control">
+                                <div class="select is-fullwidth is-normal">
+                                    <select>
+                                        <option value="todas">Todas</option>
+                                        <option value="comida">Comida</option>
+                                        <option value="servicios">Servicios</option>
+                                        <option value="salida">Salida</option>
+                                        <option value="educacion">Educación</option>
+                                        <option value="transporte">Transporte</option>
+                                        <option value="trabajo">Trabajo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!--SECTOR DERECHA-->
+                <div class="column is-7">
+                    <div class="box">
+                        <div class="columns">
+                            <div class="column is-3">
+                                <h3 class="title is-4">Operaciones</h3>
+                            </div>
+                            <div class="column is-offset-6">
+                                <button class="button is-primary">+Nueva Operacion</button>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-3"></div>
+                            <div class="column is-6">
+                                <div class="image">
+                                    <img src="imagenes/undraw_wallet_aym5.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="is-size-4 has-text-centered mt-6 mb-4 has-text-weight-semibold">Sin resultados</h4>
+                        <p class="has-text-centered">Cambia los filtros o agrega operaciones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </section>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
