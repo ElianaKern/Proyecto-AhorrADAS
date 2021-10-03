@@ -19,15 +19,15 @@
                     <i class="fas fa-wallet mr-2" aria-hidden="true"></i>
                     AhorrADAs</a>
             </h1>
+            <!--BURGER-->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-        <!--BURGER-->
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
         <!--LINKS DE NAVEGACIÓN-->
-        <div class="navbar-end">
+        <div class="navbar-menu navbar-end">
             <a class="navbar-item has-text-white"><i class="fas fa-chart-line mr-2"></i>Balance</a>
             <a class="navbar-item has-text-white"><i class="fas fa-tag mr-2" aria-hidden="true"></i>Categorias</a>
             <a class="navbar-item has-text-white"><i class="fas fa-chart-pie mr-2" aria-hidden="true"></i>Reportes</a>
@@ -39,18 +39,18 @@
         <div class="container">
             <div class="columns">
                 <!--SECTOR IZQUIERDA-->
-                <div class="column is-offset-1 is-3">
+                <div class="column is-offset-1">
                     <!--TARJETA BALANCE-->
                     <article class="box">
                         <h3 class="title">Balance</h3>
-                        <div class="columns">
-                            <div class="column is-5">
+                        <div class="columns is-mobile">
+                            <div class="column">
                                 <p class="notification">Ganancias</p>
                                 <p class="notification">Gastos</p>
                                 <p class="notification">Total</p>
                             </div>
 
-                            <div class="column is-7">
+                            <div class="column has-text-right">
                                 <p class="notification has-text-right">4000</p>
                                 <p class="notification has-text-right">4000</p>
                                 <p class="notification has-text-right">4000</p>
@@ -58,17 +58,17 @@
                         </div>
                     </article>
                     <!--TARJETA FILTROS-->
-                    <article class="box">
+                    <form class="box">
                         <div class="columns">
                             <h3 class="title column is-6">Filtros</h3>
                             <button class="button is-ghost column is-6">Ocultar filtros</button>
                         </div>
 
                         <div class="field">
-                            <label class="label">Tipo</label>
+                            <label for="selct-tipo" class="label">Tipo</label>
                             <div class="control">
                                 <div class="select is-fullwidth is-normal">
-                                    <select>
+                                    <select is="select-tipo">
                                         <option value="todos">Todos</option>
                                         <option value="gastos">Gastos</option>
                                         <option value="ganancia">Ganancia</option>
@@ -78,10 +78,10 @@
                         </div>
 
                         <div class="field">
-                            <label class="label">Categorias</label>
+                            <label for="select-categorias" class="label">Categorias</label>
                             <div class="control">
                                 <div class="select is-fullwidth is-normal">
-                                    <select>
+                                    <select id="select-categorias">
                                         <option value="todas">Todas</option>
                                         <option value="comida">Comida</option>
                                         <option value="servicios">Servicios</option>
@@ -93,17 +93,43 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
+
+                        <div class="field">
+                            <label for="input-fecha" class="label">Desde</label>
+                            <div class="control">
+                                <div class="date is-fullwidth is-normal">
+                                    <input type="date" class="input" id="input-fecha"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="selectect-orden" class="label">Ordenar por</label>
+                            <div class="control">
+                                <div class="select is-fullwidth is-normal">
+                                    <select id="select-ordenar-por">
+                                        <option value="más reciente">Más reciente</option>
+                                        <option value="menos recienmte">Menos reciente</option>
+                                        <option value="mayor monto">Mayor monto</option>
+                                        <option value="menor monto">Menor monto</option>
+                                        <option class="a/z">A/Z</option>
+                                        <option class="z/a">Z/A</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
                 <!--SECTOR DERECHA-->
                 <div class="column is-7">
+                    <!--TARJETA OPERACIONES-->
                     <div class="box">
                         <div class="columns">
-                            <div class="column is-3">
+                            <div class="column">
                                 <h3 class="title is-4">Operaciones</h3>
                             </div>
-                            <div class="column is-offset-6">
+                            <div class="column has-text-right">
                                 <button class="button is-primary">+Nueva Operacion</button>
                             </div>
                         </div>
@@ -123,6 +149,43 @@
         </div>
         </div>
         </div>
+        <!--MODAL CATEGORIAS-->
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-8-widescreen is-10-desktop is-offset-2-widescreen is-offset-1-desktop">
+                    <article class="box">
+                        <h2 class="title is-2 has-text-weight-bold">Categorías</h2>
+                        <div class="field">
+                            <label for ="input-agregar-categorias">Nombre</label>
+                                <div class="control columns mt-4 mx-1">
+                                    <input class="input is-fullwidth" type="text" id = "input-agregar-categorias">
+                                    <button class="button is-success ml-2">Agregar</button>
+                                </div>
+                        </div>
+                    <div id="categorias" class="categorias mt-4">
+                        <div class="control columns ">
+                            <span class="is-fullwidth column mx-1">Servicios</span>
+                            <button class="button is-link is-light mx-1">Editar</button>
+                            <button class="button is-link is-light mx-1">Eliminar</button>
+                        </div>
+                        <div class="control columns ">
+                            <span class="is-fullwidth column mx-1">Salidas</span>
+                            <button class="button is-link is-light mx-1">Editar</button>
+                            <button class="button is-link is-light mx-1">Eliminar</button>
+                        </div>
+                        <div class="control columns ">
+                            <span class="is-fullwidth column mx-1">Transporte</span>
+                            <button class="button is-link is-light mx-1">Editar</button>
+                            <button class="button is-link is-light mx-1">Eliminar</button>
+                        </div>
+                    </div>
+
+                    </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </section>
 
