@@ -56,34 +56,38 @@
     </nav>
 
     <!--SECCION PRINCIPAL CON TARJETAS-->
-    <section class="section">
+    <section class="section seccion-principal">
       <div class="container">
         <div class="columns">
           <!--SECTOR IZQUIERDA-->
-          <div class="column is-offset-1">
+          <div class="column is-offset-1 is-3">
             <!--TARJETA BALANCE-->
             <article class="box">
               <h3 class="title">Balance</h3>
               <div class="columns is-mobile">
                 <div class="column">
-                  <p class="notification">Ganancias</p>
-                  <p class="notification">Gastos</p>
-                  <p class="notification">Total</p>
+                  <p class="notification is-size-5">Ganancias</p>
+                  <p class="notification is-size-5">Gastos</p>
+                  <p class="notification is-size-4">Total</p>
                 </div>
                 <div class="column has-text-right">
-                  <p class="notification has-text-right">4000</p>
-                  <p class="notification has-text-right">4000</p>
-                  <p class="notification has-text-right">4000</p>
+                  <p class="notification has-text-success">4000</p>
+                  <p class="notification has-text-danger">4000</p>
+                  <p class="notification has-text-weight-bold">4000</p>
                 </div>
               </div>
             </article>
             <!--TARJETA FILTROS-->
             <form class="box">
               <div class="columns">
-                <h3 class="title column is-6">Filtros</h3>
-                <button class="button is-ghost column is-6">
+                <div class="column">
+                   <h3 class="title is-4">Filtros</h3>
+                </div>
+                <div class="column is-flex is-justify-content-flex-end">
+                <button class="button is-ghost">
                   Ocultar filtros
                 </button>
+                </div>
               </div>
 
               <div class="field">
@@ -183,7 +187,7 @@
       </div>
 
       <!---SECCION NUEVA OPERACION -->
-      <section class="section" id="nueva-operacion">
+      <section class="section seccion-nueva-operacion" id="nueva-operacion">
         <div class="container">
           <div class="columns">
             <div
@@ -266,7 +270,7 @@
       </section>
 
       <!--SECCION CATEGORIAS-->
-      <section class="section">
+      <section class="section seccion-categorias">
         <div class="container">
           <div class="columns">
             <div
@@ -320,8 +324,52 @@
         </div>
       </section>
 
-      <!--SECCION REPORTES-->
-      <section class="section">
+       <!--SECCION REPORTES VACIO-->
+       <section class="section seccion-categorias">
+        <div class="container">
+          <div class="columns">
+            <div
+              class="
+                column
+                is-8-widescreen
+                is-10-desktop
+                is-offset-2-widescreen
+                is-offset-1-desktop
+              "
+            >
+              <article class="box">
+                <h2 class="title is-2 has-text-weight-bold">Reportes</h2>
+                <div class="columns">
+                <div class="column is-3"></div>
+                <div class="column is-6">
+                  <div class="image">
+                    <img src="imagenes/undraw_Charts_re_5qe9.svg" />
+                  </div>
+                </div>
+              </div>
+              <h4
+                class="
+                  is-size-4
+                  has-text-centered
+                  mt-6
+                  mb-4
+                  has-text-weight-semibold
+                "
+              >
+               Operaciones insuficientes
+              </h4>
+              <p class="has-text-centered">
+                Prueba agregando más operaciones
+              </p>
+                
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--SECCION REPORTES COMPLETO-->
+      <section class="section seccion-reportes">
         <div class="container">
           <div class="columns">
             <div
